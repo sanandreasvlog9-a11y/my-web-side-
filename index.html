@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Kumar - Real Estate & Property Dealer</title>
+
+<!-- CSS STYLES -->
+<style>
+/* CSS Reset & General Styling */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+--primary-color: #0d6efd;
+--dark-color: #1a1d20;
+--light-bg: #f8f9fa;
+--white: #ffffff;
+--gray: #6c757d;
+}
+
+body {
+background-color: var(--light-bg);
+color: #333;
+line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+background-color: var(--dark-color);
+color: var(--white);
+padding: 1rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+font-size: 1.4rem;
+font-weight: bold;
+color: var(--white);
+}
+
+.logo span {
+color: var(--primary-color);
+}
+
+nav a {
+color: var(--white);
+text-decoration: none;
+margin-left: 20px;
+font-weight: 500;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80');
+background-size: cover;
+background-position: center;
+height: 60vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: var(--white);
+padding: 0 20px;
+}
+
+.hero h1 {
+font-size: 2.8rem;
+margin-bottom: 10px;
+}
+
+.hero p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+color: #ddd;
+}
+
+.btn {
+background-color: var(--primary-color);
+color: var(--white);
+padding: 12px 28px;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+transition: background 0.3s;
+}
+
+.btn:hover {
+background-color: #0b5ed7;
+}
+
+/* Section Headings */
+.section-title {
+text-align: center;
+margin: 40px 0 20px;
+font-size: 2rem;
+color: var(--dark-color);
+}
+
+/* Property Grid Cards */
+.property-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 25px;
+padding: 0 5% 50px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.property-card {
+background: var(--white);
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+transition: transform 0.3s;
+}
+
+.property-card:hover {
+transform: translateY(-5px);
+}
+
+.property-img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.property-details {
+padding: 20px;
+}
+
+.property-price {
+font-size: 1.4rem;
+color: var(--primary-color);
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+.property-title {
+font-size: 1.2rem;
+margin-bottom: 8px;
+}
+
+.property-location {
+color: var(--gray);
+font-size: 0.9rem;
+margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-section {
+background-color: var(--white);
+padding: 40px 5%;
+text-align: center;
+border-top: 1px solid #ddd;
+}
+
+footer {
+background-color: var(--dark-color);
+color: var(--gray);
+text-align: center;
+padding: 20px;
+font-size: 0.9rem;
+}
+
+/* Responsive Settings */
+@media (max-width: 768px) {
+.hero h1 { font-size: 2rem; }
+nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header / Navigation Bar -->
+<header>
+<div class="logo">Sachin <span>Kumar</span> Properties</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#properties">Properties</a>
+<a href="#contact">Contact Us</a>
+</nav>
+</header>
+
+<!-- Hero Banner -->
+<section class="hero" id="home">
+<h1>Find Your Dream Property</h1>
+<p>Buy, Sell & Rent Best Residential Plots, Houses and Commercial Shops</p>
+<a href="#contact" class="btn">Get In Touch</a>
+</section>
+
+<!-- Featured Properties Listing Section -->
+<h2 class="section-title" id="properties">Featured Properties</h2>
+
+<div class="property-container">
+
+<!-- Property Card 1 -->
+<div class="property-card">
+<!-- Replace image source URL or filename below -->
+<img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" alt="Property Image" class="property-img">
+<div class="property-details">
+<div class="property-price">₹ 4,50,00,000</div>
+<h3 class="property-title">3 BHK Luxury Villa</h3>
+<p class="property-location">📍 Prime Location, Near Main Road</p>
+<button class="btn" style="width: 100%;" onclick="inquireProperty('3 BHK Luxury Villa')">Inquire Now</button>
+</div>
+</div>
+
+<!-- Property Card 2 -->
+<div class="property-card">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Property Image" class="property-img">
+<div class="property-details">
+<div class="property-price">₹ 1,50,00,000</div>
+<h3 class="property-title">Residential Plot (200 Sq. Yds)</h3>
+<p class="property-location">📍 Gated Society, Park Facing</p>
+<button class="btn" style="width: 100%;" onclick="inquireProperty('200 Sq. Yds Plot')">Inquire Now</button>
+</div>
+</div>
+
+<!-- Property Card 3 -->
+<div class="property-card">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Property Image" class="property-img">
+<div class="property-details">
+<div class="property-price">₹ 2,50,00,000</div>
+<h3 class="property-title">Commercial Space / Shop</h3>
+<p class="property-location">📍 Main Market Area</p>
+<button class="btn" style="width: 100%;" onclick="inquireProperty('Commercial Shop')">Inquire Now</button>
+</div>
+</div>
+
+</div>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+<h2>Contact Sachin Kumar</h2>
+<p style="margin: 15px 0;">For buying, selling or property consultancy, call or WhatsApp directly:</p>
+
+<!-- Add real phone number in the href link below -->
+<a href="tel:+919876543210" class="btn" style="background-color: #28a745;">📞 Call Now: +91 98765 43210</a>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 Sachin Kumar Properties. All Rights Reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT CODE -->
+<script>
+// Interactive Inquire Button Popup
+function inquireProperty(propertyName) {
+alert("Thank you for your interest in '" + propertyName + "'. Please contact Sachin Kumar directly via phone!");
+}
+
+// Smooth Scrolling Functionality
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+</script>
+</body>
+</html>
